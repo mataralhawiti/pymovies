@@ -1,0 +1,74 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: pymovies
+  namespace: '655297190328'
+  selfLink: /apis/serving.knative.dev/v1/namespaces/655297190328/services/pymovies
+  uid: 2ccd6c9b-b9a1-4c50-babd-146b1364cdd3
+  resourceVersion: AAYEIFsKMTc
+  generation: 2
+  creationTimestamp: '2023-08-30T09:10:11.072955Z'
+  labels:
+    cloud.googleapis.com/location: us-central1
+  annotations:
+    run.googleapis.com/client-name: gcloud
+    serving.knative.dev/creator: matargcp@gmail.com
+    serving.knative.dev/lastModifier: matargcp@gmail.com
+    run.googleapis.com/client-version: 444.0.0
+    run.googleapis.com/description: Flasks app that shows my IMDB movies rating
+    run.googleapis.com/operation-id: 0bf67914-291a-4b5b-b40d-0878fe6eca59
+    run.googleapis.com/ingress: all
+    run.googleapis.com/ingress-status: all
+spec:
+  template:
+    metadata:
+      name: pymovies-00002-miw
+      labels:
+        run.googleapis.com/startupProbeType: Default
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 444.0.0
+        autoscaling.knative.dev/maxScale: '100'
+    spec:
+      containerConcurrency: 80
+      timeoutSeconds: 300
+      serviceAccountName: 655297190328-compute@developer.gserviceaccount.com
+      containers:
+      - image: gcr.io/golang-389808/pymovies
+        ports:
+        - name: http1
+          containerPort: 8080
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 512Mi
+        startupProbe:
+          timeoutSeconds: 240
+          periodSeconds: 240
+          failureThreshold: 1
+          tcpSocket:
+            port: 8080
+  traffic:
+  - percent: 100
+    latestRevision: true
+status:
+  observedGeneration: 2
+  conditions:
+  - type: Ready
+    status: 'True'
+    lastTransitionTime: '2023-08-30T09:14:33.027021Z'
+  - type: ConfigurationsReady
+    status: 'True'
+    lastTransitionTime: '2023-08-30T09:14:21.930686Z'
+  - type: RoutesReady
+    status: 'True'
+    lastTransitionTime: '2023-08-30T09:14:33.123127Z'
+  latestReadyRevisionName: pymovies-00002-miw
+  latestCreatedRevisionName: pymovies-00002-miw
+  traffic:
+  - revisionName: pymovies-00002-miw
+    percent: 100
+    latestRevision: true
+  url: https://pymovies-545yaeamha-uc.a.run.app
+  address:
+    url: https://pymovies-545yaeamha-uc.a.run.app

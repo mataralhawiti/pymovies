@@ -6,11 +6,11 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 
 # create the app object
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 # load the movies data from local JSON
-# SOURCE = "dummy
-SOURCE = "sync_movies_full"
+SOURCE = "dummy"
+#SOURCE = "sync_movies_full"
 movies = os.path.abspath(os.path.realpath(os.path.join(os.path.dirname('resource'), f"resource/{SOURCE}.json")))
 with open(movies, 'r') as f:
     movies = [i for i in json.load(f)]
@@ -27,4 +27,4 @@ def index():
 
 # start the server with 'run()' method
 if __name__ == '__main__' :
-    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get("PORT", 8080)))
+    app.run(debug=False, host='0.0.0.0', port=int(os.environ.get("PORT", 8080)))
