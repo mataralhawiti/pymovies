@@ -5,8 +5,11 @@ export SERVICE_NAME=pymovies
 export GCP_PROJECT_ID="$(gcloud config get-value project)"
 export REGION=us-central1
 
-
-
+"""
+loud Run service pymovies in us-central1 is using the default Compute Engine service account. By default, this service account has broad IAM permissions.
+To increase the security of this Cloud Run service, create a dedicated service account with minimal permissions and deploy a new revision using it.
+pymovies-838@golang-389808.iam.gserviceaccount.com
+"""
 
 # Build & Deploy
 ## Submit a build using Google Cloud Build
