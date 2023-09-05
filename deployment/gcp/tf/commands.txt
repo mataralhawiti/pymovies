@@ -1,0 +1,2 @@
+export TF_VAR_project_id='golang-389808'
+export TF_VAR_image_id="gcr.io/golang-389808/pymovies"
