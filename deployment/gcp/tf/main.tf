@@ -15,4 +15,5 @@ module "cloud_run" {
   image                 = var.image_id
   service_account_email = module.service_account.email
   members               = ["allUsers"]
+  depends_on = [module.service_account]
 }
