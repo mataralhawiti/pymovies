@@ -1,9 +1,7 @@
-# For more information, please refer to https://aka.ms/vscode-docker-python
+# First stage
 FROM python:3.10-slim-buster
 
-LABEL Name=gomovies
-
-#EXPOSE 5000
+LABEL Name=pymovies
 
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -12,18 +10,16 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Install pip requirements
-ADD requirements.txt .
+COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
 
 WORKDIR /app
-ADD . /app
+COPY . /app
 
-# Switching to a non-root user, please refer to https://aka.ms/vscode-docker-python-user-rights
+# Switching to a non-root user
 RUN useradd appuser && chown -R appuser /app
 USER appuser
 
-# During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-#To give Python Web Developers a great starting point, we chose to use Gunicorn as the default web server. 
-#Since it is referenced in the default Dockerfile, it is included as a dependency in the requirements.txt file.
+# Run
 #CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
-CMD exec gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 0 app:app
+CMD exec gunicorn --bind 0.0.0.0:5000 --workers 1 --threads 8 --timeout 0 app:app

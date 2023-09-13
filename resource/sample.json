@@ -1,0 +1,98 @@
+[
+    {
+        "movie_id": "tt0357413",
+        "movie_url": "https://www.imdb.com/title/tt0357413",
+        "name": "Anchorman: The Legend of Ron Burgundy",
+        "year": 2004,
+        "certificate": "PG-13",
+        "runtime": "1 hr 34 min",
+        "genre": [
+            "Comedy"
+        ],
+        "rating": 7,
+        "desc": "In the 1970s, an anchorman's stint as San Diego's top-rated newsreader is challenged when an ambitious newswoman becomes his co-anchor.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTQ2MzYwMzk5Ml5BMl5BanBnXkFtZTcwOTI4NzUyMw@@._V1_.jpg",
+        "vote": 369629
+    },
+    {
+        "movie_id": "tt0405422",
+        "movie_url": "https://www.imdb.com/title/tt0405422",
+        "name": "The 40 Year Old Virgin",
+        "year": 2005,
+        "certificate": "R",
+        "runtime": "1 hr 56 min",
+        "genre": [
+            "Comedy",
+            "Romance"
+        ],
+        "rating": 7,
+        "desc": "Goaded by his buddies, a nerdy guy who's never \"done the deed\" only finds the pressure mounting when he meets a single mother.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNWY1NDI0ZTQtMjJiNS00ODY4LWE1NmUtYTkwNzY3NWQ0ZDZjXkEyXkFqcGdeQXVyMTM0NTc2NDgw._V1_.jpg",
+        "vote": 453796
+    },
+    {
+        "movie_id": "tt1232829",
+        "movie_url": "https://www.imdb.com/title/tt1232829",
+        "name": "21 Jump Street",
+        "year": 2012,
+        "certificate": "R",
+        "runtime": "1 hr 49 min",
+        "genre": [
+            "Action",
+            "Comedy",
+            "Crime"
+        ],
+        "rating": 7,
+        "desc": "A pair of underachieving cops are sent back to a local high school to blend in and bring down a synthetic drug ring.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNTZjNzRjMTMtZDMzNy00Y2ZjLTg0OTAtZjVhNzYyZmJjOTljXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg",
+        "vote": 581047
+    },
+    {
+        "movie_id": "tt0829482",
+        "movie_url": "https://www.imdb.com/title/tt0829482",
+        "name": "Superbad",
+        "year": 2007,
+        "certificate": "R",
+        "runtime": "1 hr 53 min",
+        "genre": [
+            "Comedy"
+        ],
+        "rating": 7,
+        "desc": "Two co-dependent high school seniors are forced to deal with separation anxiety after their plan to stage a booze-soaked party goes awry.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BY2VkMDg4ZTYtN2M3Yy00NWZiLWE2ODEtZjU5MjZkYWNkNGIzXkEyXkFqcGdeQXVyODY5Njk4Njc@._V1_.jpg",
+        "vote": 608245
+    },
+    {
+        "movie_id": "tt0243155",
+        "movie_url": "https://www.imdb.com/title/tt0243155",
+        "name": "Bridget Jones's Diary",
+        "year": 2001,
+        "certificate": "R",
+        "runtime": "1 hr 37 min",
+        "genre": [
+            "Comedy",
+            "Drama",
+            "Romance"
+        ],
+        "rating": 6,
+        "desc": "Bridget Jones is determined to improve herself while she looks for love in a year in which she keeps a personal diary.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BYjc3NjU1ZTEtNmNjNi00YzNiLWI3OWQtMTJmYTRkZDc1NDE2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
+        "vote": 253809
+    },
+    {
+        "movie_id": "tt0317248",
+        "movie_url": "https://www.imdb.com/title/tt0317248",
+        "name": "Cidade de Deus",
+        "year": 2002,
+        "certificate": "R18",
+        "runtime": "2 hr 10 min",
+        "genre": [
+            "Crime",
+            "Drama"
+        ],
+        "rating": 8,
+        "desc": "In the slums of Rio, two kids' paths diverge as one struggles to become a photographer and the other a kingpin.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BOTMwYjc5ZmItYTFjZC00ZGQ3LTlkNTMtMjZiNTZlMWQzNzI5XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+        "vote": 778370
+    }
+]

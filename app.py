@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.DEBUG)
 app = Flask(__name__, static_url_path='/static')
 
 # load the movies data from local JSON
-# "export SOURCE=dummy"
+# export SOURCE=sample
 SOURCE = os.environ.get("SOURCE", "sync_movies_full")
 
 movies = os.path.abspath(os.path.realpath(os.path.join(os.path.dirname('resource'), f"resource/{SOURCE}.json")))
@@ -28,4 +28,4 @@ def index():
 
 # start the server with 'run()' method
 if __name__ == '__main__' :
-    app.run(debug=False, host='0.0.0.0', port=int(os.environ.get("PORT", 8080)))
+    app.run(debug=False, host='0.0.0.0', port=5000)

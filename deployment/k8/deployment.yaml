@@ -1,26 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myimdb
+  name: pymovies
   labels:
-    app: myimdb
+    app: pymovies
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myimdb
+      app: pymovies
   template:
     metadata:
       labels:
-        app: myimdb
+        app: pymovies
     spec:
       containers:
-        - name: myimdbapp
-          image: docker.io/matar86/myimdb:v2
+        - name: pymoviesapp
+          # Pull from local docker registry
+          image: docker.io/matar86/pymovies:v2
+          imagePullPolicy: Never
           resources:
             limits:
               cpu: "20m"
-              memory: "50Mi"
+              memory: "100Mi"
             requests:
               cpu: "10m"
               memory: "50Mi"
