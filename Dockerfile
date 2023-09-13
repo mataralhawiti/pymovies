@@ -1,5 +1,7 @@
+ARG python=python:3.10-slim-buster
+
 # First stage
-FROM python:3.10-slim-buster
+FROM ${python}
 
 LABEL Name=pymovies
 

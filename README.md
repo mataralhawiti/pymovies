@@ -10,9 +10,9 @@ The app can be deployed in many ways such as local, local docker, kubernetes, GC
 ```python app.py```
 
 ## Run locally - Docker
-```docker build --tag gomovies:v1 .```
+```docker build --tag pymovies:v1 .```
 
-```python app.py```
+```docker run --rm -p 5000:5000 pymovies:v1```
 
 ## Run on Minikube (Manually)
 
