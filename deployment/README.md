@@ -1,10 +1,13 @@
 ## Deployment options
 
 ### Run locally - Python app
+
+Install requirements
 ```shell
 python -m pip install -r requirements.txt
 ```
 
+Start the app
 ```shell
 python app.py
 ```
