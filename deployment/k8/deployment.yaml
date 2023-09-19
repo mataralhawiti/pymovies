@@ -17,7 +17,7 @@ spec:
       containers:
         - name: pymoviesapp
           # Pull from local docker registry
-          image: docker.io/matar86/pymovies:v2
+          image: pymovies:v1
           imagePullPolicy: Never
           resources:
             limits:
