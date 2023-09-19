@@ -11,6 +11,7 @@ Start the app
 ```shell
 python app.py
 ```
+<br>
 
 ### Run locally - Docker
 ```shell
@@ -43,6 +44,7 @@ minikube tunnel
 The app should be accessable on :
 
 ```http://127.0.0.1:5000/``` 
+<br>
 
 
 ### Run it on Minikube (Helm Chart)
@@ -60,3 +62,4 @@ minikube tunnel
 The app should be accessable on :
 
 ```http://127.0.0.1:5000/``` 
+<br>
