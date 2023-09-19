@@ -1,9 +1,13 @@
 ## Deployment options
 
 ### Run locally - Python app
-```python -m pip install -r requirements.txt```
+```shell
+python -m pip install -r requirements.txt
+```
 
-```python app.py```
+```shell
+python app.py
+```
 
 ### Run locally - Docker
 ```docker build --tag pymovies:v1 .```
