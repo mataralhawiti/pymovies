@@ -16,7 +16,10 @@ COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
 
 WORKDIR /app
-COPY . /app
+COPY ./resource/ /app/resource/
+COPY ./static/ /app/static/
+COPY ./templates/ /app/templates/
+COPY ./app.py /app/
 
 # Switching to a non-root user
 RUN useradd appuser && chown -R appuser /app
