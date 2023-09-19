@@ -20,7 +20,7 @@ docker build --tag pymovies:v1 .
 ```shell
 docker run --rm -p 5000:5000 pymovies:v1
 ```
-<\n>
+<br>
 ### Run on Minikube (Manually)
 
 **First**, in a terminal window  :
