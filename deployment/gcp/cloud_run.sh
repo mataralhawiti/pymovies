@@ -6,7 +6,7 @@ export GCP_PROJECT_ID="$(gcloud config get-value project)"
 export REGION=us-central1
 
 """
-loud Run service pymovies in us-central1 is using the default Compute Engine service account. By default, this service account has broad IAM permissions.
+Cloud Run service pymovies in us-central1 is using the default Compute Engine service account. By default, this service account has broad IAM permissions.
 To increase the security of this Cloud Run service, create a dedicated service account with minimal permissions and deploy a new revision using it.
 pymovies-838@golang-389808.iam.gserviceaccount.com
 """
@@ -22,7 +22,7 @@ gcloud run deploy ${SERVICE_NAME} \
     --region=${REGION} \
     #--allow-unauthenticated
 
-## unauthenticated invocations - public
+## allow unauthenticated invocations - public
 gcloud run services add-iam-policy-binding ${SERVICE_NAME} \
     --member="allUsers" \
     --region=${REGION} \
