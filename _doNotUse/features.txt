@@ -22,11 +22,14 @@ It is recommended to double check and reset permissions for sensitive files and 
 
 --- docker commands :
 
-docker pull matar86/myimdb
+docker build --tag pymovies:v1 .
+docker scout quickview
 
 docker run -d -p 5000:5000 myimdb
 
---
+
+
+-- GCP command
 https://cloud.google.com/build/docs/building/build-python
 https://cloud.google.com/build/docs/running-builds/submit-build-via-cli-api
 https://cloud.google.com/build/docs/building/build-containerize-python

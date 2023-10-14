@@ -26,5 +26,5 @@ RUN useradd appuser && chown -R appuser /app
 USER appuser
 
 # Run
-#CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
-CMD exec gunicorn --bind 0.0.0.0:5000 --workers 1 --threads 8 --timeout 0 app:app
+CMD ["gunicorn", "--preload", "--bind", "0.0.0.0:5000", "app:app"]
+#CMD exec gunicorn --bind 0.0.0.0:5000 --workers 1 --threads 8 --timeout 0 app:app
