@@ -19,7 +19,6 @@ from traceback import print_tb
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
-import aiohttp
 import asyncio
 import platform
 if platform.system()=='Windows':
