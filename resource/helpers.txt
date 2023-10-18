@@ -1,0 +1,7 @@
+# convert to Newline_delimited
+cat resource/sync_movies_full.json | jq -c ".[]" > resource/movies_full_Newline_delimited.json
+
+# split
+cd resource
+mkdir movies && cd movies
+split -dl 100 --additional-suffix=.json movies_full_Newline_delimited.json movies
