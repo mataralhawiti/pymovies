@@ -14,7 +14,7 @@ class extrat_movie_name(beam.DoFn):
     """extract movie name"""
     def process(self, element):
         movie = element['name']
-        return [movie] #movie
+        yield movie
     
 def run(argv=None):
     """Runs JSON to GCS pipeline.
@@ -39,7 +39,7 @@ def run(argv=None):
             | 'Reading movies JSON file' >> ReadFromText(known_args.input)
             | 'Load JSON to Dict' >> beam.Map(json.loads)
             # | 'Get length' >> beam.FlatMap(lambda movies: [len(movies)])
-            # | 'Get movie name' >> beam.ParDo(extrat_movie_name())
+            # | 'extrat movie name' >> beam.ParDo(extrat_movie_name())
             | 'extrat movie name' >> beam.FlatMap(lambda movies: [movies['name']])
             | 'Write to local' >> WriteToText(known_args.output)
         )
