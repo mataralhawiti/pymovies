@@ -44,8 +44,10 @@ gcloud services enable dataflow
 
 # Fix stage location
 python3 dataflows/gcs_to_gcs_v1.py \
+    --project=${GCP_PROJECT} \
     --region=${REGION} \
     --runner=DataflowRunner \
-    --project=${GCP_PROJECT} \
-    --job_name=gcs-to-gcs-$(date +%Y%m%d%H%M%S) \
-    --temp_location=gs://temp-movies-useast1-00111001-dev
+    --staging_location=gs://temp-stage-useast1-00111001-dev/movies/gcs-to-gcs \
+    --temp_location=gs://temp-movies-useast1-00111001-dev \
+    --job_name=gcs-to-gcs-$(date +%Y%m%d%H%M%S)
+    
