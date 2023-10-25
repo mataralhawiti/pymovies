@@ -1,7 +1,8 @@
 """
 gcs to gcs dataflow, and how to use secret manager through setup
 
-python3 dataflows/local_to_local.py --runner=DirectRunner  --output=resource/tmp.txt
+python3 dataflows/gcs_to_gcs.py --runner=DirectRunner  --output=resource/tmp.txt
+python3 dataflows/gcs_to_gcs.py --runner=DirectRunner dataflow
 """
 import argparse
 import json
@@ -43,12 +44,12 @@ def run(argv=None):
     parser.add_argument(
         '--input',
         dest='input',
-        default='gs://temp-movies/source/sample.json',
+        default='gs://temp-movies-useast1-00111001-dev/source/sample2.json',
         help='Input specified as a GCS path containing movies json.')    
     parser.add_argument(
         '--output',
         dest='output',
-        default='gs://temp-movies/dest/full-movies.txt')
+        default='gs://temp-movies-useast1-00111001-dev/dest/full-movies.txt')
      
     known_args, pipeline_args = parser.parse_known_args(argv)
     pipeline_options = PipelineOptions(pipeline_args)
