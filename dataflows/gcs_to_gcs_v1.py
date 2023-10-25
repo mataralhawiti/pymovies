@@ -1,4 +1,6 @@
 """
+# https://www.pythian.com/blog/apache-beam-the-future-of-data-processing
+
 gcs to gcs dataflow, and how to use secret manager through setup
 
 python3 dataflows/gcs_to_gcs.py --runner=DirectRunner  --output=resource/tmp.txt
@@ -44,12 +46,12 @@ def run(argv=None):
     parser.add_argument(
         '--input',
         dest='input',
-        default='gs://temp-movies-useast1-00111001-dev/source/sample2.json',
+        default='gs://matar-useast1-00111001-dev/source/sample2.json',
         help='Input specified as a GCS path containing movies json.')    
     parser.add_argument(
         '--output',
         dest='output',
-        default='gs://temp-movies-useast1-00111001-dev/dest/names')
+        default='gs://matar-useast1-00111001-dev/dest/names')
      
     known_args, pipeline_args = parser.parse_known_args(argv)
     pipeline_options = PipelineOptions(pipeline_args)
@@ -63,7 +65,7 @@ def run(argv=None):
         movies_count = (
             data
             | 'Get movies count' >> beam.combiners.Count.Globally()
-            | 'Write count' >> WriteToText(file_path_prefix='gs://temp-movies-useast1-00111001-dev/dest/count', file_name_suffix='.txt')
+            | 'Write count' >> WriteToText(file_path_prefix='gs://matar-useast1-00111001-dev/dest/count', file_name_suffix='.txt')
         )
         movies_names = (
             data
