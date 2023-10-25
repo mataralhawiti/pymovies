@@ -7,28 +7,6 @@ export ENV=dev
 # GCS buckets
 
 ## - create
-# gcloud storage buckets create gs://temp-movies-${_REGION}-00111001-${ENV}  \
-# --project=${GCP_PROJECT}  \
-# --default-storage-class=STANDARD \
-# --location=${REGION} \
-# --uniform-bucket-level-access \
-# --no-public-access-prevention
-
-
-# gcloud storage buckets create gs://temp-bucket-${_REGION}-00111001-${ENV}  \
-# --project=${GCP_PROJECT}  \
-# --default-storage-class=STANDARD \
-# --location=${REGION} \
-# --uniform-bucket-level-access \
-# --no-public-access-prevention
-
-# gcloud storage buckets create gs://temp-stage-${_REGION}-00111001-${ENV}  \
-# --project=${GCP_PROJECT}  \
-# --default-storage-class=STANDARD \
-# --location=${REGION} \
-# --uniform-bucket-level-access \
-# --no-public-access-prevention
-
 gcloud storage buckets create gs://matar-${_REGION}-00111001-${ENV}  \
 --project=${GCP_PROJECT}  \
 --default-storage-class=STANDARD \
