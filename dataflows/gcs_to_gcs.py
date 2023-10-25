@@ -12,17 +12,6 @@ from apache_beam.io import ReadFromText, WriteToText
 from apache_beam.io import BigQueryDisposition, WriteToBigQuery
 from apache_beam.options.pipeline_options import PipelineOptions
 
-# def sample_access_secret_version(param=None):
-#     from google.cloud import secretmanager_v1
-#     SECRET_ID = "xxx"
-#     PROJECT_ID = "xxx"
-#     client = secretmanager_v1.SecretManagerServiceClient()
-#     request = secretmanager_v1.AccessSecretVersionRequest(
-#         name=f"projects/{PROJECT_ID}/secrets/{SECRET_ID}/versions/latest",
-#     )
-#     response = client.access_secret_version(request=request)
-#     return response.payload.data.decode('UTF-8')
-
 class extrat_movie_name(beam.DoFn):
     def __init__(self):
         self.token = None
