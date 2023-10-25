@@ -43,7 +43,7 @@ gcloud storage cp -r resource/movies gs://temp-movies-${_REGION}-00111001-${ENV}
 gcloud services enable dataflow
 
 # Fix stage location
-python3 dataflows/gcs_to_gcs.py \
+python3 dataflows/gcs_to_gcs_v1.py \
     --region=${REGION} \
     --runner=DataflowRunner \
     --project=${GCP_PROJECT} \
