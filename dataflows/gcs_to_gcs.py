@@ -14,25 +14,25 @@ from apache_beam.options.pipeline_options import PipelineOptions
 
 class extrat_movie_name(beam.DoFn):
     def __init__(self):
-        self.token = None
+        self.token = " -token" #None
 
-    def setup(self):
-        def sample_access_secret_version(param=None):
-            from google.cloud import secretmanager_v1
-            SECRET_ID = "xxx"
-            PROJECT_ID = "xxxx"
-            client = secretmanager_v1.SecretManagerServiceClient()
-            request = secretmanager_v1.AccessSecretVersionRequest(
-                name=f"projects/{PROJECT_ID}/secrets/{SECRET_ID}/versions/latest",
-            )
-            response = client.access_secret_version(request=request)
-            return response.payload.data.decode('UTF-8')
-        self.token = sample_access_secret_version()
+    # def setup(self):
+    #     def sample_access_secret_version(param=None):
+    #         from google.cloud import secretmanager_v1
+    #         SECRET_ID = "xxx"
+    #         PROJECT_ID = "xxxx"
+    #         client = secretmanager_v1.SecretManagerServiceClient()
+    #         request = secretmanager_v1.AccessSecretVersionRequest(
+    #             name=f"projects/{PROJECT_ID}/secrets/{SECRET_ID}/versions/latest",
+    #         )
+    #         response = client.access_secret_version(request=request)
+    #         return response.payload.data.decode('UTF-8')
+    #     self.token = sample_access_secret_version()
 
     """extract movie name"""
     def process(self, element):
         movie = element['name']
-        return [movie+self.token] #movie
+        yield movie+self.token
     
 def run(argv=None):
     """Runs JSON to GCS pipeline.
