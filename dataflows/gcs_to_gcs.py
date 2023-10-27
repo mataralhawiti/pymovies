@@ -1,6 +1,8 @@
 """
 gcs to gcs dataflow, and how to use secret manager through setup
 
+# https://www.pythian.com/blog/apache-beam-the-future-of-data-processing
+
 python3 dataflows/gcs_to_gcs.py --runner=DirectRunner  --output=resource/tmp.txt
 python3 dataflows/gcs_to_gcs.py --runner=DirectRunner dataflow
 """
