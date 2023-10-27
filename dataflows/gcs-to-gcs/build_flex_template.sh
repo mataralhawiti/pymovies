@@ -24,7 +24,7 @@ gcloud builds submit --tag "$TEMPLATE_IMAGE" dataflows/gcs-to-gcs
 
 
 
-# Creating a Flex Template
+# Creating a Flex Template - Only for GCP Dataflow NOT Apache Beam
 # ------------------------
 export BUCKET="dataflows-useast1-00111001-dev"
 export TEMPLATE_PATH="gs://$BUCKET/templates/gcs-to-gcs/gcs-gcs.json"
@@ -41,6 +41,3 @@ gcloud dataflow flex-template run "gcs-to-gcs-beam-`date +%Y%m%d-%H%M%S`" \
     --template-file-gcs-location "$TEMPLATE_PATH" \
     --project=${GCP_PROJECT} \
     --region=${REGION}
-
-
-
