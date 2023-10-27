@@ -1,5 +1,5 @@
 """
-gcs to gcs dataflow, and how to use secret manager through setup
+gcs to gcs dataflow, and how to use secret manager through setup interface
 
 # https://www.pythian.com/blog/apache-beam-the-future-of-data-processing
 
