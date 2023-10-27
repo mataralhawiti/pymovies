@@ -32,7 +32,8 @@ gcloud storage cp -r resource/movies gs://matar-useast1-00111001-dev/source/movi
 # enable dataflow API
 gcloud services enable dataflow
 
-# Run
+# Run manually
+# -------------
 python3 dataflows/gcs_to_gcs_v1.py \
     --project=${GCP_PROJECT} \
     --region=${REGION} \
@@ -40,4 +41,6 @@ python3 dataflows/gcs_to_gcs_v1.py \
     --staging_location=gs://dataflows-useast1-00111001-dev/staging \
     --temp_location=gs://dataflows-useast1-00111001-dev/staging/temp \
     --job_name=gcs-to-gcs-$(date +%Y%m%d%H%M%S)
-    
+
+
+# 
