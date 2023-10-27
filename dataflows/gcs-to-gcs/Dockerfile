@@ -1,9 +1,9 @@
 FROM gcr.io/dataflow-templates-base/python3-template-launcher-base
 
-ENV FLEX_TEMPLATE_PYTHON_REQUIREMENTS_FILE="requirements.txt"
-ENV FLEX_TEMPLATE_PYTHON_PY_FILE="main.py"
+ENV FLEX_TEMPLATE_PYTHON_REQUIREMENTS_FILE="/template/requirements.txt"
+ENV FLEX_TEMPLATE_PYTHON_PY_FILE="/template/main.py"
 
-COPY . /gcs-gcs-v1
+COPY . /template
 
 # We could get rid of installing libffi-dev and git, or we could leave them.
 RUN apt-get update \

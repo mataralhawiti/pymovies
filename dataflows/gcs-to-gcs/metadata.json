@@ -1,24 +1,12 @@
 {
-    "name": "GCS to GCS beam Python flex template",
-    "description": "GCS to GCS beam Python flex template.",
-    "parameters": [
-      {
-        "name": "input",
-        "label": "Input GCS bucket.",
-        "helpText": "Name of the input PGCS bucket.",
-        "isOptional": true,
-        "regexes": [
-          "projects/[^/]+/subscriptions/[a-zA-Z][-_.~+%a-zA-Z0-9]{2,}"
-        ]
-      },
-      {
-        "name": "output",
-        "label": "GCS output bucket.",
-        "helpText": "Name of GCS bucket output.",
-        "isOptional": true,
-        "regexes": [
-          "([^:]+:)?[^.]+[.].+"
-        ]
-      }
-    ]
-  }
+  "name": "GCS to GCS beam Python flex template",
+  "description": "GCS to GCS beam Python flex template.",
+  "parameters": [
+    {
+      "name": "output",
+      "label": "GCS output bucket.",
+      "helpText": "Name of GCS bucket output.",
+      "isOptional": false
+    }
+  ]
+}

@@ -1,11 +1,12 @@
 # Set envs - 9
+# ------------
 export GCP_PROJECT="$(gcloud config get-value project)" \
 export REGION=us-east1
 export _REGION=useast1
 export ENV=dev
 
 # GCS buckets
-
+# -----------
 ## - create
 gcloud storage buckets create gs://matar-${_REGION}-00111001-${ENV}  \
 --project=${GCP_PROJECT}  \
@@ -20,6 +21,10 @@ gcloud storage buckets create gs://dataflows-${_REGION}-00111001-${ENV}  \
 --location=${REGION} \
 --uniform-bucket-level-access \
 --no-public-access-prevention
+
+## - set 
+export BUCKET="dataflows-useast1-00111001-dev"
+
 
 ## upload
 ### single file
@@ -38,9 +43,6 @@ python3 dataflows/gcs_to_gcs_v1.py \
     --project=${GCP_PROJECT} \
     --region=${REGION} \
     --runner=DataflowRunner \
-    --staging_location=gs://dataflows-useast1-00111001-dev/staging \
-    --temp_location=gs://dataflows-useast1-00111001-dev/staging/temp \
+    --staging_location=gs://${BUCKET}/staging \
+    --temp_location=gs://${BUCKET}/staging/temp \
     --job_name=gcs-to-gcs-$(date +%Y%m%d%H%M%S)
-
-
-# 
